@@ -4,9 +4,9 @@ var fs = require('fs')
 
 var dirName = process.argv[2] // 传的参数是从第 2 个开始的
 
-var checkDir = fs.existsSync("./" + dirName);  //判断文件是否存在
-if(console.log(checkDir)){        //若存在，则退出
-  process.exit(1)
+if(fs.existsSync("./" + dirName)){        //判断文件是否存在
+  console.log("The file already exists!")
+  process.exit(1) 
 }
   
 else{            //若不存在，则进行以下操作 
